@@ -6,7 +6,7 @@ package com.example.jwon223.testapp4;
 public class Product {
 
     private int _id;
-    private String _productname;
+    private String _productname, gender;
 
     public Product(){
     }
@@ -29,5 +29,13 @@ public class Product {
 
     public String get_productname() {
         return _productname;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 }

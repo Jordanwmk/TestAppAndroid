@@ -10,7 +10,6 @@ public class MainActivity extends AppCompatActivity {
 
     MyDBHandler dbHandler;
     TextView nameInput, genderInput, resultLabel;
-//    String result;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,9 +17,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         nameInput = (TextView) findViewById(R.id.nameInput);
-//        genderInput = (TextView) findViewById(R.id.genderInput);
+        genderInput = (TextView) findViewById(R.id.genderInput);
         resultLabel = (TextView) findViewById(R.id.resultLabel);
-//        result = nameInput.getText().toString() + " " + genderInput.getText().toString();
         dbHandler = new MyDBHandler(this, null, null , 1);
 
 
@@ -30,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     public void addToDB(View view){
         dbHandler.onCreate(dbHandler.getWritableDatabase());
         Product product = new Product(nameInput.getText().toString());
+        product.setGender(genderInput.getText().toString());
         dbHandler.addProduct(product);
         seeDB(view);
     }
