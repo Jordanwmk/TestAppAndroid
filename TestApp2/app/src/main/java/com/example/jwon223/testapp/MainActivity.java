@@ -20,8 +20,7 @@ public class MainActivity extends AppCompatActivity {
         TextView passwordInput = (TextView) findViewById(R.id.passwordInput);
 
         if (passwordInput.getText().toString().equals("123")){
-//            Intent i = new Intent(this, MainActivity3.class);
-            Intent i = new Intent(this, MainActivity3.class);
+            Intent i = new Intent(this, MainActivity2.class);
 
             i.putExtra("username", usernameInput.getText().toString());
             startActivity(i);

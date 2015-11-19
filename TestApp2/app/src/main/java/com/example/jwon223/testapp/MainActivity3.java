@@ -2,6 +2,7 @@ package com.example.jwon223.testapp;
 
 
 import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,8 +10,7 @@ import android.os.Bundle;
 public class MainActivity3 extends AppCompatActivity {
 
     ActionBar.Tab testTab, profileTab;
-
-    Fragment testFragmentTab = new ProfileFragmentTab();
+//    Fragment testFragmentTab = new ProfileFragmentTab();
     Fragment profileFragmentTab = new MainActivity2();
 
 
@@ -38,7 +38,7 @@ public class MainActivity3 extends AppCompatActivity {
         profileTab.setText("Profile");
 
         // Setting tab listeners.
-        testTab.setTabListener(new TabListener(testFragmentTab));
+//        testTab.setTabListener(new TabListener(testFragmentTab));
         profileTab.setTabListener(new TabListener((profileFragmentTab)));
 
 

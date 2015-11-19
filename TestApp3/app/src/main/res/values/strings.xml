@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">TestApp3</string>
+    <string name="Profile">Profile</string>
+    <string name="Friends">Friends</string>
+    <string name="LogOut">Log Out</string>
+</resources>
