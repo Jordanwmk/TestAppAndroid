@@ -30,17 +30,18 @@ public class MainActivity extends AppCompatActivity {
         Product product = new Product(nameInput.getText().toString());
         product.setGender(genderInput.getText().toString());
         dbHandler.addProduct(product);
-        seeDB(view);
+//        seeDB(view);
     }
 
     //Print the database
     public void seeDB(View view){
-//        Intent i = new Intent(this, Main2Activity.class);
-//        String dbString = dbHandler.databaseToString();
-//
-//        i.putExtra("name", dbString);
+        Intent i = new Intent(this, Main2Activity.class);
         String dbString = dbHandler.databaseToString();
-        resultLabel.setText(dbString);
+
+        i.putExtra("db", dbString);
+        startActivity(i);
+//        String dbString = dbHandler.databaseToString();
+//        resultLabel.setText(dbString);
     }
 
     public void createDB(View view) {
